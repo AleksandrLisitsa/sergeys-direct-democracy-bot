@@ -12,7 +12,7 @@ class ChangeIcon(commands.Cog):
     async def change_banner(self,
                     ctx : discord.TextChannel | discord.VoiceChannel | discord.StageChannel):
         choice = await vote(self.bot, ctx=ctx, title=f"Поставить ли новую аву?", options=["Да", "Нет"],
-                        symbols='letters', importance=Importance.medium)
+                        symbols='thumbs', importance=Importance.medium)
         if choice.pop() == 1:
             await ctx.send("Голосование провалилось")
         else:
